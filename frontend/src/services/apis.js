@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8000"
+const BASE_URL = "https://mern-chat-app-yjcn.onrender.com";
 
 export const endpoints = {
     BASE_URL: BASE_URL,
