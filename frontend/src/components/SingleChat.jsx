@@ -21,7 +21,7 @@ import animationData from "../animation/typing.json";
 import { endpoints } from "../services/apis";
 import Lottie from "react-lottie";
 
-const { USER_API, CHAT_API, MESSAGE_API, BASE_URL } = endpoints;
+const {  MESSAGE_API, BASE_URL } = endpoints;
 
 // const ENDPOINT = "http://localhost:8000";
 var socket, selectedChatCompare;

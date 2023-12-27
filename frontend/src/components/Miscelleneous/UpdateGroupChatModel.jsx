@@ -15,8 +15,6 @@ const UpdateGroupChatModel = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
     user,
     selectedChat,
     setSelectedChat,
-    selectedUsers,
-    setSelectedUsers,
   } = ChatState();
   const { isOpen, onClose, onOpen } = useDisclosure();
 
@@ -39,7 +37,7 @@ const UpdateGroupChatModel = ({ fetchAgain, setFetchAgain, fetchMessages }) => {
     try {
       setRenameloading(true);
       const { data } = await axios.put(
-        `${CHAT_API}`+"/rename",
+        CHAT_API + "/rename",
         {
           chatId: selectedChat._id,
           chatName: groupChatName,

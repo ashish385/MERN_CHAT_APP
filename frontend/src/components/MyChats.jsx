@@ -8,7 +8,7 @@ import { getSender } from '../config/ChatLogics';
 import GroupChatModal from './Miscelleneous/GroupChatModal';
 import { endpoints } from "../services/apis";
 
-const { USER_API, CHAT_API, MESSAGE_API } = endpoints;
+const {  CHAT_API} = endpoints;
 
 
 const MyChats = ({ fetchAgain, setFetchAgain }) => {
@@ -44,11 +44,10 @@ const MyChats = ({ fetchAgain, setFetchAgain }) => {
   useEffect(() => {
     setLoggedUser(user);
     fetchChats();
-  }, [fetchAgain,loggedUser]);
+  }, [fetchAgain,loggedUser,user]);
   return (
     <>
       <Box
-        // d={{ base: selectedChat ? "none" : "flex", md: "flex" }}
         className={` ${
           selectedChat ? "hidden" : "flex"
         } md:flex  flex-col items-center bg-white p-3 w-full md:w-[31%] rounded-lg border`}
